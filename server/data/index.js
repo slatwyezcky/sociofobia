@@ -21,7 +21,7 @@ export const users = [
   },
 ];
 
-export const posts = [
+const postReversed = [
   {
     _id: new mongoose.Types.ObjectId(),
     userId: "63bfee7e84b7284f8c9a0207",
@@ -279,3 +279,5 @@ export const posts = [
     comments: ["<3!", "<3!", "<3!"],
   },
 ];
+
+export const posts = postReversed.slice().reverse();
